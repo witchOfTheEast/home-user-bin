@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Exec scrot selection 
+# Takes first argument as filename
+# appends date, time and .png
+
+usage () {
+    echo 'Usage: scr <FILENAME>'
+    exit 1
+}
+
+if [[ $# != 1 ]]; then usage; fi
+
+name=$1
+customDate=%m.%d.%y_%I.%M
+echo 'Drag and select...' 
+
+scrot -s ${name}_${customDate}.png

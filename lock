@@ -1,0 +1,6 @@
+#!/bin/bash
+image=~/tempLock.png
+scrot ${image}
+#convert ${image} -crop 1680x1050+1280 +repage ${resized}
+convert ${image} -blur 4x4 -modulate 70,10,100 ${image}
+i3lock -e -i ${image} && rm ${image}

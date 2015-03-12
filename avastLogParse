@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Parse avast logs and pull out the number of quarantined and failed threats
+
+file1=$1
+
+echo 'Successful:'
+grep -c -i successful ${file1}
+
+echo 'Failed to move:'
+grep -c -i 'moving.*denied' ${file1}
+
+echo 'Failed to delete:'
+grep -c -i 'delete.*denied' ${file1}
+
+echo 'Decompression bombs:'
+grep -c -i bomb ${file1} 

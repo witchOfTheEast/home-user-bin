@@ -1,0 +1,4 @@
+#!/bin/bash
+xrandr --output LVDS-0 --auto
+sleep 5s
+xrandr --output VGA-0 --off

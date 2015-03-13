@@ -23,5 +23,5 @@ grep -c -i bomb ${file1}
 
 echo '' 
 echo -e 'Threat files still in place\n>>>>'
-sed '1,+8d' ${file1} | sed -r -e '/.*denied/d' | sed -r -e '/.*bomb/,$d' | sed -r -e '/.*successfully/,$d'
+sed -e '1,+8d' ${file1} -r -e '/.*denied/d' | tac | sed -e '1,+9d' -e '/.*bomb/,+1d' -e '/.*successfully/,+1d' | tac | cat -n
 echo -e '<<<<'

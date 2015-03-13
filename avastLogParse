@@ -3,15 +3,25 @@
 # Parse avast logs and pull out the number of quarantined and failed threats
 
 file1=$1
+file2=./failed
 
-echo 'Successful:'
+echo -e 'Summary of scan report:\n'
+echo ${file1}
+echo ''
+
+echo -n 'Successfully removed: '
 grep -c -i successful ${file1}
 
-echo 'Failed to move:'
+echo -n 'Failed to move: '
 grep -c -i 'moving.*denied' ${file1}
 
-echo 'Failed to delete:'
+echo -n 'Failed to delete: '
 grep -c -i 'delete.*denied' ${file1}
 
-echo 'Decompression bombs:'
+echo -n 'Decompression bombs: '
 grep -c -i bomb ${file1} 
+
+echo '' 
+echo -e 'Threat files still in place\n>>>>'
+sed '1,+8d' ${file1} | sed -r -e '/.*denied/d' | sed -r -e '/.*bomb/,$d' | sed -r -e '/.*successfully/,$d'
+echo -e '<<<<'

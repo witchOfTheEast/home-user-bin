@@ -1,0 +1,5 @@
+!#/bin/bash
+
+server=$(echo ${1} | sed -r -e s/\\..*//)
+
+xfreerdp -K -u uird -g 1680x1010 -T ${server} $1

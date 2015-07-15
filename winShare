@@ -1,0 +1,8 @@
+#! /bin/bash
+server=
+username=
+domain=
+share="/users/rdunn/"
+
+
+mount -v -t cifs //${server}${share} /home/rdunn/mnt -o username=${username},domain=${domain},iocharset=utf8,file_mode=0777,dir_mode=0777

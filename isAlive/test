@@ -1,0 +1,27 @@
+#! /bin/bash
+
+file="./preFile"
+
+declare varArr=()
+
+while read name; do
+    echo $name
+    varArr+=("${name}");
+    echo "inside loop whole array"
+    echo ${varArr[@]}
+done < $file
+
+echo "whole array"
+echo ${varArr[@]}
+
+
+echo "array by values"
+for value in ${varArr}; do
+    echo "value: ${value}";
+done
+
+echo "array by index"
+echo ${varArr[0]}
+echo ${varArr[1]}
+echo ${varArr[2]}
+

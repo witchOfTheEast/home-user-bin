@@ -1,0 +1,105 @@
+#! /bin/bash
+
+# Test hostname/ip for ping and rdp
+# Send email on failure
+
+# Variables
+# Hostname must be qualified
+toAddresses=rdunn@unitedimaging.com 
+password=
+username=uird
+ip=10.10.10.192
+hostname=united-028.ui.local1
+preFile="./preFile"
+logFile="./logFile"
+preArray=()
+
+if [[ ! -r ${preFile} ]]; then
+    echo "Cannot find ${preFile}";
+    exit;
+fi
+
+while read name; do
+    preArray+=("${name}");
+    echo "Read line"
+done < ${preFile}
+
+pingPre=${preArray[0]}
+rdpPre=${preArray[1]}
+echo "At the start:"
+echo "Ping: ${pingPre}"
+echo "RDP: ${rdpPre}"
+
+
+#Test if the machine responds to ping
+#Pass is 0, fail is 1
+#0 is true, 1 is false
+
+ping -q -c 4 ${ip}
+pingIpRet=$?
+ping -q -c 4 ${hostname}
+pingHostRet=$?
+echo "Ping returned: ${pingIpRet}"
+
+if [[ ! ${pingIpRet} -eq ${pingHostRet} ]]; then
+    echo "IP and HOSTNAME do not equally ping out";
+fi
+
+pingCur=${pingIpRet}
+
+
+if [[ ${pingCur} -eq 0 ]]; then # current ping OK
+    
+    if [[ ${pingPre} -eq 1 ]]; then # prev ping FAILED
+        pingMail="PingRecovered";    
+        pingPre=0;
+    fi;
+
+else # current ping FAILED
+    if [[ ! ${pingPre} -eq 1 ]]; then # prev ping NOT FAILED
+        pingMail="PingFailed";
+    fi;
+fi
+
+#Test xfreerdp --authonly
+#Pass is 0, fail is not 0
+
+xfreerdp -u ${username} -p ${password}  --ignore-certificate --authonly ${hostname}
+rdpRet=$?
+echo "RDP returned: ${rdpRet}"
+
+echo "Beginning first RDP eval"
+if [[ ${rdpRet} -ne 0 ]]; then # current RDP NOT OK
+    echo "RDP eval shows failed"
+    rdpMail="RdpFailed";
+    rdpPre=1;
+
+else # current RDP OK
+    echo "RDP eval shows OK"
+    if [[ ${rdpPre} -eq 1 ]]; then # prev RDP FAILED
+        echo "rdpPre shows failed"
+        rdpMail="RdpRecovered";
+        rdpPre=0;
+    else
+        rdpMail="RDP Successful";
+    fi;
+fi
+
+if [[ ${rdpMail} == "RdpFailed" ]]; then
+    echo 'RDP FAILED ' | mail -s "RDP to ${hostname} failed" ${toAddresses};
+    echo "$(date) RDP to ${hostname} failed ${pingMail}" >> ${logFile};
+fi
+
+if [[ ${rdpMail} == "RdpRecovered" ]]; then
+    echo 'RDP OK ' | mail -s "RDP to ${hostname} has recovered" ${toAddresses};
+    echo "$(date) RDP to ${hostname} recovered ${pingMail}" >> ${logFile};
+fi
+
+if [[ ${rdpMail} == "RDP Successful" ]]; then
+    echo "$(date) RDP to ${hostname} successful ${pingMail}" >> ${logFile};
+fi
+
+echo 'New ping and rdp results to write:'
+echo "Ping: ${pingPre}"
+echo "RDP: ${rdpPre}"
+echo -e "${pingPre}\n${rdpPre}" > $preFile

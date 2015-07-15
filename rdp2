@@ -1,0 +1,3 @@
+#! /bin/bash
+
+xfreerdp -d united-034 -u uiadmin -K -g 1680x1010 10.10.4.194

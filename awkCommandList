@@ -1,0 +1,4 @@
+# print values in file1 not in file2
+awk 'FNR==NR { a[$3]++; next } !a[$3]{print $3}' firstQueue07.txt firstQueue.txt
+#fill empty field vaules with 'done'
+awk '{ for(i=1; i<=NF; i++) if( == 100)  = 'done' }; { print  }' filename

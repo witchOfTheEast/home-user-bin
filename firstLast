@@ -1,3 +1,20 @@
 #!/bin/bash
+# return the first and last lines of a file
+function usage () {
+    echo "Usage: firstLast <FILE1> <FILE2>"
+}
 
-sed -n '1p;$p' $1
+if [[ ${#} == 0 ]]; then
+    usage;
+    exit; else
+
+        for filename in ${*}; do
+            if ! [[ -e ${filename} ]]; then 
+                echo "The file '${1}' does not exist"; else
+
+                    echo -e "\nReturning the first and last line of ${filename}\n";
+                    sed -n '1p;$p' ${filename};
+            fi
+
+        done;
+fi

@@ -1,8 +1,9 @@
 #! /bin/bash
-server=
-username=
-domain=
-share="/users/rdunn/"
+server=dfs1.hq.sdamedia.com
+username=rdunn
+domain=hq.sdamedia.com 
+share="/shared/it_shared"
 
 
-mount -v -t cifs //${server}${share} /home/rdunn/mnt -o username=${username},domain=${domain},iocharset=utf8,file_mode=0777,dir_mode=0777
+#mount -v -t cifs //${server}${share} /home/dunn/netShare -o username=${username},domain=${domain},iocharset=utf8,file_mode=0777,dir_mode=0777
+sudo mount -v -t cifs //172.16.200.150/shared/it_shared netShare/ -o username=rdunn,domain=hq.sdamedia.com,uid=1000,gid=1000,soft

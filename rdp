@@ -2,8 +2,8 @@
 
 echo "Attempting RDP to $1"
 #server=$(echo ${1} | sed -r -e s/\\..*//)
-domain=.ui.local1
+domain=.hq.sdamedia.com
 target=$1${domain}
-xfreerdp -K -u uird -g 1680x1010 -T $1 ${target}
+xfreerdp /u:rdunn /size:1920x1060 /t:$1 /v:${target} -grab-keyboard 
 
 #i3-msg 'workspace $rdp'

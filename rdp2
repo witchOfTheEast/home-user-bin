@@ -1,3 +1,9 @@
-#! /bin/bash
+#!/bin/bash
 
-xfreerdp -d united-034 -u uiadmin -K -g 1680x1010 10.10.4.194
+echo "Attempting RDP to $2 as $1"
+#server=$(echo ${1} | sed -r -e s/\\..*//)
+domain=.hq.sdamedia.com
+target=$2${domain}
+xfreerdp /u:$1 /size:1920x1050 /t:$2 /v:${target} -grab-keyboard
+
+#i3-msg 'workspace $rdp'

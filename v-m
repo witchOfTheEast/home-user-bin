@@ -1,0 +1,3 @@
+#!/bin/bash
+
+virt-manager ; pkttyagent -p $(pgrep virt-manager)

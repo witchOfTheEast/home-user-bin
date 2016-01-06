@@ -1,0 +1,2 @@
+#!/bin/bash
+grep -E "(EE|WW)" /var/log/Xorg.0.log

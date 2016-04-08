@@ -73,7 +73,7 @@ if [[ ${#} -eq 1 ]]; then
                 ;; 
             la) user=.\\administrator
                 ;;
-            na) user=.\\nonadmin
+            na) user=hq\\nonadmin
                 ;; 
             *) user=hq\\$user
                 ;;

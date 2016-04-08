@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mount /dev/sdc1 /home/dunn/mp -o user,rw,uid=dunn

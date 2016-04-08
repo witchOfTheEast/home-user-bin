@@ -1,0 +1,14 @@
+#!/bin/bash
+# copy terminfo to remote machines for properly functioning urxvt
+host=${1}
+
+myCommand="
+
+if ! [[ -d /etc/terminfo/r ]]; then
+    mkdir /etc/terminfo/r;
+fi
+"
+ssh ${host} "${myCommand}"
+
+scp $HOME/bin/rxvt-unicode-256color ${host}:/etc/terminfo/r/rxvt-unicode-256color
+

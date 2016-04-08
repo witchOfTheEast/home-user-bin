@@ -1,0 +1,16 @@
+/home/dunn/netShare/*
+/dev/*
+/proc/*
+/sys/*
+/tmp/*
+/run/*
+/mnt/*
+/media/*
+/lost+found
+/home/swapfile
+/home/backup_admin
+/home/*/.thumbnails/*
+/home/*/.cache/*
+/home/*/.local/share/Trash/*
+/home/*/.gvfs
+/home/*/.config/chromium-backup-crashrecovery-*

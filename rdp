@@ -75,7 +75,7 @@ if [[ ${#} -eq 1 ]]; then
                 ;;
             na) user=hq\\nonadmin
                 ;; 
-            *) user=hq\\$user
+            *) user=$user
                 ;;
         esac
         

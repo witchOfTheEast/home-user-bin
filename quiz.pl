@@ -52,7 +52,13 @@ my @questions = (
     "Edit the default homepage of apache /usr/share/doc/HTML - Ch 14",
     "Configure Apache so that requests to http://servername/~user are served by the public_html directory in the corresponding user's home directory. Access through the browser should be limited to the user owner of that directory via basic authentication - Ch 14",
     "Configure a httpd group directory with restricted acccess - Ch 14",
-
+    "Install, setup and enable basic samba. Don't forget any packages. Don't forget to enable. 15.1",
+    "Check available samba documentation with rpm 15.2",
+    "Backup smb.conf. Configure a workgroup. Limit samba access by host. Limit by ip. 15.3",
+    "Create a common user on both systems. Configure samba [homes] to be writeable to a single user accessible from a single network. 15.4",
+    "Create a public samba share /home/public , accessible to all. Set perms to protect deletion. 15.5",
+    "Create two users. Create a samaba share limited to those two in a group (ref. Ch. 8). Setup a third to be the mount.cifs access. 15.6",
+    "Make samba sure settings are persistent. 15.7"
 );
 
 my @selected_questions = ();

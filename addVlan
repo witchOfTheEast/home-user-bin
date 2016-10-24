@@ -1,3 +1,4 @@
 #!/bin/bash
 sudo ip link add link ens9 name ens9.25 type vlan id 25
 sudo ip addr add 172.16.201.60/24 brd 172.16.201.255 dev ens9.25
+sudo ip link set ens9.25 up

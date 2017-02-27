@@ -2,7 +2,7 @@
 
 usage () {
     echo -n "
-Usage: rdp [a|aa|la|na] v|k|HOSTNAME
+Usage: rdp [a|aa|la|na] v|k|HOSTNAME|ipa.ddr.ess.num
    
     When a single arguement is give:
         The 1st argument must be a HOSTNAME or hostname shortcut.
@@ -28,42 +28,78 @@ Usage: rdp [a|aa|la|na] v|k|HOSTNAME
 "
 }
 
+domain=.hq.sdamedia.com
+size=1920x1039
+user=''
+host_type=''
+pattern=''
+target=''
+
+if [[ ${#} -eq 1 ]]; then
+#    echo "Pattern is type: 'host only'";
+    pattern='hostonly';
+    host=$1;
+
+elif [[ ${#} -eq 2 ]]; then
+#    echo "Pattern is type: 'user and host'";
+    pattern='userhost';
+    user=$1;
+    host=$2;
+else
+    usage;
+fi
+
 connect () {
     # Using -dash option syntax because ''grab-keyboard'' was not effective
     # when used as /grab-keyboard
    
     echo "
     Connecting to $target as $user." # Cosmetic issue - $user contains unescaped slash
-    xfreerdp -u:$user -size:$size -t:$hostname -v:$target -grab-keyboard -z +clipboard | grep -v '336' 
+    xfreerdp -u:$user -size:$size -t:$host -v:$target -grab-keyboard -z +clipboard | grep -v '336' 
 }
 
-domain=.hq.sdamedia.com
-size=1920x1050
+test_connect () {
+    echo "my domain: $domain
+    my pattern: $pattern
+    my user: $user
+    my host: $host
+    my target: $target"
+}
 
-if [[ ${#} -eq 1 ]]; then
-    hostname=$1
-    
-    case $hostname in
+host_select () {
+    echo "host received: $2";
+    if [[ $2 =~ [0-9] ]]; then 
+        echo "host_type='IPADDRESS'";
+        target=$host;
 
-        v)  user=.\\administrator
-            hostname=veeam
-            ;;
-        k)  user=hq\\administrator
-            hostname=kore
-            ;;
-        *)  user=hq\\rdunn
-            ;;
-    esac
-    
-    target=$hostname${domain}
-    
-    connect 
-    
-    elif [[ ${#} -gt 1 ]]; then
-        user=$1
-        hostname=$2
-        target=$hostname${domain}
-        
+    elif [[ $2 =~ [a-zA-Z] ]]; then
+        host_type='HOSTNAME';
+        target=$host${domain};
+
+    else
+        echo -e "\nUnrecognized host format";
+        usage;
+    fi
+}
+
+user_select () {
+    host=$2;
+    if [[ $pattern == 'hostonly' ]]; then
+        case $host in
+
+                v)  user=.\\administrator
+    echo $host;
+                    host=veeam
+    echo $host;
+                    ;;
+                k)  user=hq\\administrator
+                    host=kore
+                    ;;
+                *)  user=hq\\a-rdunn
+                    ;;
+        esac;
+    elif [[ $pattern == 'userhost' ]]; then
+
         case $user in
 
             a)  user=hq\\administrator 
@@ -76,12 +112,15 @@ if [[ ${#} -eq 1 ]]; then
                 ;; 
             *) user=$user
                 ;;
-        esac
-        
-        connect 
+        esac;
 
+    fi
+}
 
-    else
-        usage
-
-fi
+main () {
+    user_select $pattern $host $user;
+    host_select $pattern $host $user;
+    test_connect;
+}
+    
+main

@@ -1,0 +1,4 @@
+# test for ints, strs and blank lines
+/[0-9]+/ { print "Found integer"}
+/[A-Za-z]+/ { print "Found string"}
+/^$/ { print "Found blank" }

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mount_point="/home/dunn/scripts/bacula"
+file_name="target_one"
+file_name2="/subfolder/target_two"
+
+
+find $mount_point/ -regextype grep -iregex ".*${file_name2}" -printf %P%f\\t

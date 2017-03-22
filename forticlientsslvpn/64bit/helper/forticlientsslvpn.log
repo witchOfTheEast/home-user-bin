@@ -1,0 +1,302 @@
+12/22/2015 21:08:21 [2779] set the loglevel to 1
+12/22/2015 21:08:21 [2782] rcv cmd:0 at state[0]
+12/22/2015 21:08:21 [2782] starting ssl vpn tunnel[4.0.2317]
+12/22/2015 21:08:21 [2784] route backup START
+12/22/2015 21:08:21 [2784] route backup DONE
+12/22/2015 21:08:21 [2785] execl /home/dunn/bin/forticlientsslvpn/64bit/./helper/get_fortisslvpn_info /home/dunn/bin/forticlientsslvpn/64bit/./helper vpn.adventistmediacenter.com 443   ...
+12/22/2015 21:08:21 [2785] trusted CA dir: /home/dunn/.fctsslvpn_trustca
+12/22/2015 21:08:21 [2785] set loglevel to 1
+12/22/2015 21:08:21 [2785] Peer's certificate is not valid. action is 1
+12/22/2015 21:08:21 [2785] peer's certificate: 
+        Version: 1 (0x0)$        Serial Number: 16354617681823055952 (0xe2f746219262c050)$    Signature Algorithm: sha256WithRSAEncryption$        Issuer: C=US, ST=California, L=Riverside, O=AMC, OU=IT, CN=vpn.adventistmediacenter.com/emailAddress=it@adventistmediacenter.com$        Validity$            Not Before: Sep 22 19:45:04 2015 GMT$            Not After : Sep 19 19:45:04 2025 GMT$        Subject: C=US, ST=California, L=Riverside, O=AMC, OU=IT, CN=vpn.adventistmediacenter.com/emailAddress=it@adventistmediacenter.com$        Subject Public Key Info:$            Public Key Algorithm: rsaEncryption$                Public-Key: (2048 bit)$                Modulus:$                    00:c1:18:76:38:15:28:fb:a5:57:1c:c5:4a:95:a4:$                    23:68:c0:c1:27:1b:e3:c0:c3:4b:04:12:66:5c:cb:$                    9d:ae:eb:32:d4:54:6e:d6:e0:f9:dd:ea:97:5c:0d:$                    bd:49:5d:d2:51:49:b8:6e:c0:64:35:ad:c6:aa:c2:$                    be:aa:1b:45:e4:04:8a:c8:07:12:11:bd:ca:6d:ad:$                    44:f8:ca:29:6f:ab:20:35:6a:ea:b1:e3:28:01:fe:$                    4e:e0:c9:fd:41:3b:5e:d3:34:79:eb:00:4f:21:8f:$                    e8:79:41:68:07:2b:17:94:81:4a:8e:72:ce:0e:63:$                    76:7d:2b:4b:6d:40:2f:f2:df:34:2b:4c:2a:a5:01:$                    21:96:01:7c:de:0b:a5:ed:2e:5e:93:00:25:bf:05:$                    82:7a:ef:54:2b:de:fa:a1:4c:93:b2:f5:67:d4:ae:$                    ce:84:00:06:a4:ec:ee:bc:f8:b6:28:8f:72:61:56:$                    20:60:e0:7a:ea:81:52:b8:38:5b:bc:00:92:98:f4:$                    36:b2:b8:35:a1:11:a0:c1:03:e4:b1:8d:50:80:52:$                    2e:b7:b2:72:4e:8d:37:2a:37:20:73:f7:22:91:1c:$                    f2:7c:32:0f:a4:15:86:63:27:fa:53:e6:75:fe:bc:$                    b8:4f:9a:b9:c7:02:73:c8:07:bd:bf:54:9e:46:93:$                    12:2f$                Exponent: 65537 (0x10001)$    Signature Algorithm: sha256WithRSAEncryption$         3f:9c:20:ea:60:f7:82:1d:56:aa:5d:32:77:de:42:4f:d5:d4:$         f4:48:7d:5c:fe:c0:0a:a5:ea:7a:ef:b7:f4:46:fa:8b:d4:3e:$         8c:ad:ae:5a:2d:4d:b1:70:ec:09:76:9e:36:96:5f:6a:d9:c7:$         d6:1b:15:2c:42:cc:c2:13:a7:75:61:5b:5d:3b:37:fc:ae:79:$         8b:59:ca:24:83:62:7d:1e:83:b6:a6:64:be:af:7f:a6:6b:36:$         a2:26:12:12:04:37:29:a1:a1:fd:a3:5b:28:fc:cf:b7:85:63:$         ae:a5:09:fb:87:fa:3f:96:6c:f5:2b:42:6d:fa:14:3f:96:89:$         f6:b1:13:12:91:38:65:8d:ea:54:3f:16:75:94:b4:45:0a:c7:$         e2:f9:7f:3d:08:5c:ec:66:96:37:d8:bb:be:25:df:2a:d7:2e:$         87:c0:c0:d9:7c:f6:0a:fb:09:58:a9:49:55:7c:44:8d:ec:30:$         31:3a:b2:6a:63:ca:7e:6c:35:b2:04:5a:3b:df:1a:cc:bf:16:$         0f:41:95:05:a1:81:98:0b:84:4a:15:9e:94:74:46:ff:13:48:$         71:d0:11:7d:33:f5:cf:04:41:8b:77:e4:04:43:7e:24:5d:a4:$         6f:ff:e1:66:8d:71:1e:c3:2c:fa:8c:17:fd:c7:87:05:ef:8b:$         cd:9f:07:be$
+12/22/2015 21:08:23 [2785] realm is enabled: 
+12/22/2015 21:08:23 [2785] no Content-Length
+12/22/2015 21:08:23 [2785] try to get cookie for the first time: 98 :  SVPNNETWORKCOOKIE=; path=/remote/network; expires=Wed, 23-Dec-2015 05:07:22 GMT; secure; httponly
+12/22/2015 21:08:23 [2785] no Content-Length
+12/22/2015 21:08:23 [2785] cookie: SVPNCOOKIE=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2xlxF5nq9xTUX5z5I7Ye/5S%0ahlrR4cwLZ8wbR/OJezKaTzylJTHjMzrLWb9PcOsFBY4=%0a
+12/22/2015 21:08:23 [2785] no Content-Length
+12/22/2015 21:08:23 [2785] no Content-Length
+12/22/2015 21:08:23 [2785] 0|vpn.adventistmediacenter.com|443|1||wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2xlxF5nq9xTUX5z5I7Ye/5S%0ahlrR4cwLZ8wbR/OJezKaTzylJTHjMzrLWb9PcOsFBY4=%0a|0
+12/22/2015 21:08:23 [2782] ssl vpn tunnel started
+12/22/2015 21:08:23 [2787] server=vpn.adventistmediacenter.com[vpn.adventistmediacenter.com] port=443[443] version=1 tunnel= cookie=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2xlxF5nq9xTUX5z5I7Ye/5S%0ahlrR4cwLZ8wbR/OJezKaTzylJTHjMzrLWb9PcOsFBY4=%0a exclusive routing: 0
+
+12/22/2015 21:08:23 [2787] starting pppd
+12/22/2015 21:08:23 [2787] use tty:/dev/pts/1
+12/22/2015 21:08:23 [2787] connecting to vpn.adventistmediacenter.com:443
+12/22/2015 21:08:23 [2787] [xml config]: GET /remote/fortisslvpn_xml ... (received 812 bytes): 
+HTTP/1.1 200 OK
+Date: Wed, 23 Dec 2015 05:07:22 GMT
+Set-Cookie: SVPNCOOKIE=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2xlxF5nq9xTUX5z5I7Ye/5S%0ahlrR4cwLZ8wbR/OJezKaTzylJTHjMzrLWb9PcOsFBY4=%0a; path=/; secure; httponly
+Transfer-Encoding: chunked
+Content-Type: text/xml
+X-Frame-Options: SAMEORIGIN
+
+<?xml version='1.0' encoding='utf-8'?><sslvpn-tunnel ver='1'><fos platform='FG200D' major='5' minor='02' patch='4' build='0688' branch='688' /><client-config save-password='off' keep-alive='off' auto-connect='off' /><ipv4><dns ip='172.16.200.42' /><dns ip='172.16.200.46' /><wins ip='172.16.200.42' /><wins ip='172.16.200.46' /><assigned-addr ipv4='172.16.202.10' /></ipv4><idle-timeout val='300' /><auth-timeout val='28800' /></sslvpn-tunnel>
+----
+
+12/22/2015 21:08:23 [2787] Got local address from ppp, interface will be  up
+12/22/2015 21:08:24 [2782] rcv cmd:1 at state[1]
+12/22/2015 21:08:24 [2782] stopping ssl vpn tunnel[v4.0.2317]
+12/22/2015 21:08:24 [2782] kill_child:2787
+12/22/2015 21:08:24 [2782] kill_child:2785
+12/22/2015 21:08:24 [2787] killing pppd ...
+12/22/2015 21:08:24 [2785] signal rcved, logout now
+12/22/2015 21:08:24 [2787] kill_child:2789
+12/22/2015 21:08:24 [2782] tunnel terminated
+12/22/2015 21:08:24 [2799] begin cleanup linux...
+12/22/2015 21:08:24 [2799] restore /etc/resolv.conf
+12/22/2015 21:08:24 [2799] clean up route...
+12/22/2015 21:08:24 [2799] truncate pppd.log
+12/22/2015 21:08:24 [2799] truncate forticlientsslvpn.log
+12/22/2015 21:08:24 [2782] ssl vpn tunnel stopped
+12/22/2015 21:08:24 [2782] rcv cmd:2 at state[0]
+12/22/2015 21:09:08 [2816] set the loglevel to 1
+12/22/2015 21:09:08 [2816] sslvpn connection version:4.0.2317
+12/22/2015 21:09:08 [2811] set the loglevel to 1
+12/22/2015 21:09:08 [2816] rcv cmd:0 at state[0]
+12/22/2015 21:09:08 [2816] starting ssl vpn tunnel[4.0.2317]
+12/22/2015 21:09:08 [2818] route backup START
+12/22/2015 21:09:08 [2818] route backup DONE
+12/22/2015 21:09:08 [2819] execl /home/dunn/bin/forticlientsslvpn/64bit/./helper/get_fortisslvpn_info /home/dunn/bin/forticlientsslvpn/64bit/./helper vpn.adventistmediacenter.com 443   ...
+12/22/2015 21:09:08 [2819] trusted CA dir: /home/dunn/.fctsslvpn_trustca
+12/22/2015 21:09:08 [2819] set loglevel to 1
+12/22/2015 21:09:08 [2819] Peer's certificate is not valid. action is 1
+12/22/2015 21:09:08 [2819] peer's certificate: 
+        Version: 1 (0x0)$        Serial Number: 16354617681823055952 (0xe2f746219262c050)$    Signature Algorithm: sha256WithRSAEncryption$        Issuer: C=US, ST=California, L=Riverside, O=AMC, OU=IT, CN=vpn.adventistmediacenter.com/emailAddress=it@adventistmediacenter.com$        Validity$            Not Before: Sep 22 19:45:04 2015 GMT$            Not After : Sep 19 19:45:04 2025 GMT$        Subject: C=US, ST=California, L=Riverside, O=AMC, OU=IT, CN=vpn.adventistmediacenter.com/emailAddress=it@adventistmediacenter.com$        Subject Public Key Info:$            Public Key Algorithm: rsaEncryption$                Public-Key: (2048 bit)$                Modulus:$                    00:c1:18:76:38:15:28:fb:a5:57:1c:c5:4a:95:a4:$                    23:68:c0:c1:27:1b:e3:c0:c3:4b:04:12:66:5c:cb:$                    9d:ae:eb:32:d4:54:6e:d6:e0:f9:dd:ea:97:5c:0d:$                    bd:49:5d:d2:51:49:b8:6e:c0:64:35:ad:c6:aa:c2:$                    be:aa:1b:45:e4:04:8a:c8:07:12:11:bd:ca:6d:ad:$                    44:f8:ca:29:6f:ab:20:35:6a:ea:b1:e3:28:01:fe:$                    4e:e0:c9:fd:41:3b:5e:d3:34:79:eb:00:4f:21:8f:$                    e8:79:41:68:07:2b:17:94:81:4a:8e:72:ce:0e:63:$                    76:7d:2b:4b:6d:40:2f:f2:df:34:2b:4c:2a:a5:01:$                    21:96:01:7c:de:0b:a5:ed:2e:5e:93:00:25:bf:05:$                    82:7a:ef:54:2b:de:fa:a1:4c:93:b2:f5:67:d4:ae:$                    ce:84:00:06:a4:ec:ee:bc:f8:b6:28:8f:72:61:56:$                    20:60:e0:7a:ea:81:52:b8:38:5b:bc:00:92:98:f4:$                    36:b2:b8:35:a1:11:a0:c1:03:e4:b1:8d:50:80:52:$                    2e:b7:b2:72:4e:8d:37:2a:37:20:73:f7:22:91:1c:$                    f2:7c:32:0f:a4:15:86:63:27:fa:53:e6:75:fe:bc:$                    b8:4f:9a:b9:c7:02:73:c8:07:bd:bf:54:9e:46:93:$                    12:2f$                Exponent: 65537 (0x10001)$    Signature Algorithm: sha256WithRSAEncryption$         3f:9c:20:ea:60:f7:82:1d:56:aa:5d:32:77:de:42:4f:d5:d4:$         f4:48:7d:5c:fe:c0:0a:a5:ea:7a:ef:b7:f4:46:fa:8b:d4:3e:$         8c:ad:ae:5a:2d:4d:b1:70:ec:09:76:9e:36:96:5f:6a:d9:c7:$         d6:1b:15:2c:42:cc:c2:13:a7:75:61:5b:5d:3b:37:fc:ae:79:$         8b:59:ca:24:83:62:7d:1e:83:b6:a6:64:be:af:7f:a6:6b:36:$         a2:26:12:12:04:37:29:a1:a1:fd:a3:5b:28:fc:cf:b7:85:63:$         ae:a5:09:fb:87:fa:3f:96:6c:f5:2b:42:6d:fa:14:3f:96:89:$         f6:b1:13:12:91:38:65:8d:ea:54:3f:16:75:94:b4:45:0a:c7:$         e2:f9:7f:3d:08:5c:ec:66:96:37:d8:bb:be:25:df:2a:d7:2e:$         87:c0:c0:d9:7c:f6:0a:fb:09:58:a9:49:55:7c:44:8d:ec:30:$         31:3a:b2:6a:63:ca:7e:6c:35:b2:04:5a:3b:df:1a:cc:bf:16:$         0f:41:95:05:a1:81:98:0b:84:4a:15:9e:94:74:46:ff:13:48:$         71:d0:11:7d:33:f5:cf:04:41:8b:77:e4:04:43:7e:24:5d:a4:$         6f:ff:e1:66:8d:71:1e:c3:2c:fa:8c:17:fd:c7:87:05:ef:8b:$         cd:9f:07:be$
+12/22/2015 21:09:10 [2819] realm is enabled: 
+12/22/2015 21:09:10 [2819] no Content-Length
+12/22/2015 21:09:10 [2819] try to get cookie for the first time: 98 :  SVPNNETWORKCOOKIE=; path=/remote/network; expires=Wed, 23-Dec-2015 05:08:10 GMT; secure; httponly
+12/22/2015 21:09:10 [2819] no Content-Length
+12/22/2015 21:09:10 [2819] cookie: SVPNCOOKIE=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2xEVt7OmH/3RgNJEFIgPRn8%0akEyePFSOIdnnDteOan2L+w1O46Ks6sGFFt714tduSr8=%0a
+12/22/2015 21:09:10 [2819] no Content-Length
+12/22/2015 21:09:10 [2819] no Content-Length
+12/22/2015 21:09:10 [2819] 0|vpn.adventistmediacenter.com|443|1||wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2xEVt7OmH/3RgNJEFIgPRn8%0akEyePFSOIdnnDteOan2L+w1O46Ks6sGFFt714tduSr8=%0a|0
+12/22/2015 21:09:10 [2816] ssl vpn tunnel started
+12/22/2015 21:09:10 [2821] server=vpn.adventistmediacenter.com[vpn.adventistmediacenter.com] port=443[443] version=1 tunnel= cookie=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2xEVt7OmH/3RgNJEFIgPRn8%0akEyePFSOIdnnDteOan2L+w1O46Ks6sGFFt714tduSr8=%0a exclusive routing: 0
+
+12/22/2015 21:09:10 [2821] starting pppd
+12/22/2015 21:09:10 [2821] use tty:/dev/pts/1
+12/22/2015 21:09:10 [2821] connecting to vpn.adventistmediacenter.com:443
+12/22/2015 21:09:11 [2821] [xml config]: GET /remote/fortisslvpn_xml ... (received 812 bytes): 
+HTTP/1.1 200 OK
+Date: Wed, 23 Dec 2015 05:08:10 GMT
+Set-Cookie: SVPNCOOKIE=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2xEVt7OmH/3RgNJEFIgPRn8%0akEyePFSOIdnnDteOan2L+w1O46Ks6sGFFt714tduSr8=%0a; path=/; secure; httponly
+Transfer-Encoding: chunked
+Content-Type: text/xml
+X-Frame-Options: SAMEORIGIN
+
+<?xml version='1.0' encoding='utf-8'?><sslvpn-tunnel ver='1'><fos platform='FG200D' major='5' minor='02' patch='4' build='0688' branch='688' /><client-config save-password='off' keep-alive='off' auto-connect='off' /><ipv4><dns ip='172.16.200.42' /><dns ip='172.16.200.46' /><wins ip='172.16.200.42' /><wins ip='172.16.200.46' /><assigned-addr ipv4='172.16.202.10' /></ipv4><idle-timeout val='300' /><auth-timeout val='28800' /></sslvpn-tunnel>
+----
+
+12/22/2015 21:09:11 [2821] Got local address from ppp, interface will be  up
+12/22/2015 21:09:12 [2816] rcv cmd:1 at state[1]
+12/22/2015 21:09:12 [2816] stopping ssl vpn tunnel[v4.0.2317]
+12/22/2015 21:09:12 [2816] kill_child:2821
+12/22/2015 21:09:12 [2816] kill_child:2819
+12/22/2015 21:09:12 [2821] killing pppd ...
+12/22/2015 21:09:12 [2819] signal rcved, logout now
+12/22/2015 21:09:12 [2821] kill_child:2823
+12/22/2015 21:09:12 [2816] tunnel terminated
+12/22/2015 21:09:12 [2833] begin cleanup linux...
+12/22/2015 21:09:12 [2833] restore /etc/resolv.conf
+12/22/2015 21:09:12 [2833] clean up route...
+12/22/2015 21:09:12 [2833] truncate pppd.log
+12/22/2015 21:09:12 [2833] truncate forticlientsslvpn.log
+12/22/2015 21:09:12 [2816] ssl vpn tunnel stopped
+12/22/2015 21:09:12 [2816] rcv cmd:2 at state[0]
+12/25/2015 08:07:07 [6944] set the loglevel to 1
+12/25/2015 08:07:07 [6944] sslvpn connection version:4.0.2317
+12/25/2015 08:07:07 [6938] set the loglevel to 1
+12/25/2015 08:07:07 [6944] rcv cmd:0 at state[0]
+12/25/2015 08:07:07 [6944] starting ssl vpn tunnel[4.0.2317]
+12/25/2015 08:07:07 [6946] route backup START
+12/25/2015 08:07:07 [6946] route backup DONE
+12/25/2015 08:07:07 [6947] execl /home/dunn/bin/forticlientsslvpn/64bit/./helper/get_fortisslvpn_info /home/dunn/bin/forticlientsslvpn/64bit/./helper vpn.adventistmediacenter.com 443   ...
+12/25/2015 08:07:07 [6947] trusted CA dir: /home/dunn/.fctsslvpn_trustca
+12/25/2015 08:07:07 [6947] set loglevel to 1
+12/25/2015 08:07:07 [6947] Peer's certificate is not valid. action is 1
+12/25/2015 08:07:07 [6947] peer's certificate: 
+        Version: 1 (0x0)$        Serial Number: 16354617681823055952 (0xe2f746219262c050)$    Signature Algorithm: sha256WithRSAEncryption$        Issuer: C=US, ST=California, L=Riverside, O=AMC, OU=IT, CN=vpn.adventistmediacenter.com/emailAddress=it@adventistmediacenter.com$        Validity$            Not Before: Sep 22 19:45:04 2015 GMT$            Not After : Sep 19 19:45:04 2025 GMT$        Subject: C=US, ST=California, L=Riverside, O=AMC, OU=IT, CN=vpn.adventistmediacenter.com/emailAddress=it@adventistmediacenter.com$        Subject Public Key Info:$            Public Key Algorithm: rsaEncryption$                Public-Key: (2048 bit)$                Modulus:$                    00:c1:18:76:38:15:28:fb:a5:57:1c:c5:4a:95:a4:$                    23:68:c0:c1:27:1b:e3:c0:c3:4b:04:12:66:5c:cb:$                    9d:ae:eb:32:d4:54:6e:d6:e0:f9:dd:ea:97:5c:0d:$                    bd:49:5d:d2:51:49:b8:6e:c0:64:35:ad:c6:aa:c2:$                    be:aa:1b:45:e4:04:8a:c8:07:12:11:bd:ca:6d:ad:$                    44:f8:ca:29:6f:ab:20:35:6a:ea:b1:e3:28:01:fe:$                    4e:e0:c9:fd:41:3b:5e:d3:34:79:eb:00:4f:21:8f:$                    e8:79:41:68:07:2b:17:94:81:4a:8e:72:ce:0e:63:$                    76:7d:2b:4b:6d:40:2f:f2:df:34:2b:4c:2a:a5:01:$                    21:96:01:7c:de:0b:a5:ed:2e:5e:93:00:25:bf:05:$                    82:7a:ef:54:2b:de:fa:a1:4c:93:b2:f5:67:d4:ae:$                    ce:84:00:06:a4:ec:ee:bc:f8:b6:28:8f:72:61:56:$                    20:60:e0:7a:ea:81:52:b8:38:5b:bc:00:92:98:f4:$                    36:b2:b8:35:a1:11:a0:c1:03:e4:b1:8d:50:80:52:$                    2e:b7:b2:72:4e:8d:37:2a:37:20:73:f7:22:91:1c:$                    f2:7c:32:0f:a4:15:86:63:27:fa:53:e6:75:fe:bc:$                    b8:4f:9a:b9:c7:02:73:c8:07:bd:bf:54:9e:46:93:$                    12:2f$                Exponent: 65537 (0x10001)$    Signature Algorithm: sha256WithRSAEncryption$         3f:9c:20:ea:60:f7:82:1d:56:aa:5d:32:77:de:42:4f:d5:d4:$         f4:48:7d:5c:fe:c0:0a:a5:ea:7a:ef:b7:f4:46:fa:8b:d4:3e:$         8c:ad:ae:5a:2d:4d:b1:70:ec:09:76:9e:36:96:5f:6a:d9:c7:$         d6:1b:15:2c:42:cc:c2:13:a7:75:61:5b:5d:3b:37:fc:ae:79:$         8b:59:ca:24:83:62:7d:1e:83:b6:a6:64:be:af:7f:a6:6b:36:$         a2:26:12:12:04:37:29:a1:a1:fd:a3:5b:28:fc:cf:b7:85:63:$         ae:a5:09:fb:87:fa:3f:96:6c:f5:2b:42:6d:fa:14:3f:96:89:$         f6:b1:13:12:91:38:65:8d:ea:54:3f:16:75:94:b4:45:0a:c7:$         e2:f9:7f:3d:08:5c:ec:66:96:37:d8:bb:be:25:df:2a:d7:2e:$         87:c0:c0:d9:7c:f6:0a:fb:09:58:a9:49:55:7c:44:8d:ec:30:$         31:3a:b2:6a:63:ca:7e:6c:35:b2:04:5a:3b:df:1a:cc:bf:16:$         0f:41:95:05:a1:81:98:0b:84:4a:15:9e:94:74:46:ff:13:48:$         71:d0:11:7d:33:f5:cf:04:41:8b:77:e4:04:43:7e:24:5d:a4:$         6f:ff:e1:66:8d:71:1e:c3:2c:fa:8c:17:fd:c7:87:05:ef:8b:$         cd:9f:07:be$
+12/25/2015 08:07:09 [6947] realm is enabled: 
+12/25/2015 08:07:09 [6947] no Content-Length
+12/25/2015 08:07:09 [6947] try to get cookie for the first time: 98 :  SVPNNETWORKCOOKIE=; path=/remote/network; expires=Fri, 25-Dec-2015 16:05:50 GMT; secure; httponly
+12/25/2015 08:07:09 [6947] no Content-Length
+12/25/2015 08:07:09 [6947] cookie: SVPNCOOKIE=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2w/bC6N2GZ6DaP/A1vptAUp%0a3itiaojzjWCXmrgJjCWZb1Vy5Jlz0JGg6VswTu5Z7bc=%0a
+12/25/2015 08:07:09 [6947] no Content-Length
+12/25/2015 08:07:09 [6947] no Content-Length
+12/25/2015 08:07:09 [6947] 0|vpn.adventistmediacenter.com|443|1||wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2w/bC6N2GZ6DaP/A1vptAUp%0a3itiaojzjWCXmrgJjCWZb1Vy5Jlz0JGg6VswTu5Z7bc=%0a|0
+12/25/2015 08:07:09 [6944] ssl vpn tunnel started
+12/25/2015 08:07:09 [6949] server=vpn.adventistmediacenter.com[vpn.adventistmediacenter.com] port=443[443] version=1 tunnel= cookie=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2w/bC6N2GZ6DaP/A1vptAUp%0a3itiaojzjWCXmrgJjCWZb1Vy5Jlz0JGg6VswTu5Z7bc=%0a exclusive routing: 0
+
+12/25/2015 08:07:09 [6949] starting pppd
+12/25/2015 08:07:09 [6949] use tty:/dev/pts/1
+12/25/2015 08:07:09 [6949] connecting to vpn.adventistmediacenter.com:443
+12/25/2015 08:07:09 [6949] [xml config]: GET /remote/fortisslvpn_xml ... (received 812 bytes): 
+HTTP/1.1 200 OK
+Date: Fri, 25 Dec 2015 16:05:50 GMT
+Set-Cookie: SVPNCOOKIE=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aONjFB7EzaVpeO739kAG8mRUZR59nw2L63+q+2mTZn2w/bC6N2GZ6DaP/A1vptAUp%0a3itiaojzjWCXmrgJjCWZb1Vy5Jlz0JGg6VswTu5Z7bc=%0a; path=/; secure; httponly
+Transfer-Encoding: chunked
+Content-Type: text/xml
+X-Frame-Options: SAMEORIGIN
+
+<?xml version='1.0' encoding='utf-8'?><sslvpn-tunnel ver='1'><fos platform='FG200D' major='5' minor='02' patch='4' build='0688' branch='688' /><client-config save-password='off' keep-alive='off' auto-connect='off' /><ipv4><dns ip='172.16.200.42' /><dns ip='172.16.200.46' /><wins ip='172.16.200.42' /><wins ip='172.16.200.46' /><assigned-addr ipv4='172.16.202.10' /></ipv4><idle-timeout val='300' /><auth-timeout val='28800' /></sslvpn-tunnel>
+----
+
+12/25/2015 08:07:09 [6949] Got local address from ppp, interface will be  up
+12/25/2015 08:07:11 [6949] ppp interface is up
+12/25/2015 08:07:11 [6949] run_scutil 97.93.161.242 0 0...
+Generating pppd.resolv.conf...Done
+12/25/2015 08:07:12 [7014] begin sysconfig linux
+12/25/2015 08:07:12 [7014] delete route 1.1.1.1
+12/25/2015 08:07:12 [7014] Add the route for 97.93.161.242(192.168.1.1)
+12/25/2015 08:07:12 [7014] router add default gw 172.16.202.10
+12/25/2015 08:07:18 [6944] select: Interrupted system call
+12/25/2015 08:07:18 [6944] select: Interrupted system call
+03/25/2016 11:40:07 [2799] set the loglevel to 1
+03/25/2016 11:40:07 [2799] sslvpn connection version:4.0.2317
+03/25/2016 11:40:07 [2797] set the loglevel to 1
+03/25/2016 11:40:07 [2799] rcv cmd:0 at state[0]
+03/25/2016 11:40:07 [2799] starting ssl vpn tunnel[4.0.2317]
+03/25/2016 11:40:07 [2801] route backup START
+03/25/2016 11:40:07 [2801] route backup DONE
+03/25/2016 11:40:07 [2802] execl /home/dunn/bin/forticlientsslvpn/64bit/./helper/get_fortisslvpn_info /home/dunn/bin/forticlientsslvpn/64bit/./helper vpn.adventistmediacenter.com 10443   ...
+03/25/2016 11:40:07 [2802] trusted CA dir: /root/.fctsslvpn_trustca
+03/25/2016 11:40:07 [2802] set loglevel to 1
+03/25/2016 11:40:39 [2799] rcv notice:1|Connection to vpn.adventistmediacenter.com:10443 time out in 30 seconds, you might need check if the address/port is valid.
+03/25/2016 11:40:39 [2799] setup tunnel failed
+
+03/25/2016 11:40:39 [2799] kill_child:2802
+03/25/2016 11:40:39 [2799] tunnel start failed
+03/25/2016 11:40:39 [2808] begin cleanup linux...
+03/25/2016 11:40:39 [2808] restore /etc/resolv.conf
+03/25/2016 11:40:39 [2808] clean up route...
+03/25/2016 11:40:39 [2808] failed to delete route: dst=97.93.161.242, mask=255.255.255.255, gw=192.168.1.1, dev=ens9
+03/25/2016 11:40:39 [2808] truncate pppd.log
+03/25/2016 11:40:39 [2808] truncate forticlientsslvpn.log
+03/25/2016 11:40:39 [2802] FortiClient SSLVPN[4.0.2317] stopped
+03/25/2016 11:40:43 [2799] rcv cmd:1 at state[0]
+03/25/2016 11:40:43 [2799] rcv cmd:2 at state[0]
+03/25/2016 11:41:00 [2819] set the loglevel to 1
+03/25/2016 11:41:00 [2819] sslvpn connection version:4.0.2317
+03/25/2016 11:41:00 [2797] set the loglevel to 1
+03/25/2016 11:41:00 [2819] rcv cmd:0 at state[0]
+03/25/2016 11:41:00 [2819] starting ssl vpn tunnel[4.0.2317]
+03/25/2016 11:41:00 [2821] route backup START
+03/25/2016 11:41:00 [2821] route backup DONE
+03/25/2016 11:41:00 [2822] execl /home/dunn/bin/forticlientsslvpn/64bit/./helper/get_fortisslvpn_info /home/dunn/bin/forticlientsslvpn/64bit/./helper vpn.adventistmediacenter.com 443   ...
+03/25/2016 11:41:00 [2822] trusted CA dir: /root/.fctsslvpn_trustca
+03/25/2016 11:41:00 [2822] set loglevel to 1
+03/25/2016 11:41:00 [2822] Peer's certificate is not valid. action is 1
+03/25/2016 11:41:00 [2822] peer's certificate: 
+        Version: 1 (0x0)$        Serial Number: 16354617681823055952 (0xe2f746219262c050)$    Signature Algorithm: sha256WithRSAEncryption$        Issuer: C=US, ST=California, L=Riverside, O=AMC, OU=IT, CN=vpn.adventistmediacenter.com/emailAddress=it@adventistmediacenter.com$        Validity$            Not Before: Sep 22 19:45:04 2015 GMT$            Not After : Sep 19 19:45:04 2025 GMT$        Subject: C=US, ST=California, L=Riverside, O=AMC, OU=IT, CN=vpn.adventistmediacenter.com/emailAddress=it@adventistmediacenter.com$        Subject Public Key Info:$            Public Key Algorithm: rsaEncryption$                Public-Key: (2048 bit)$                Modulus:$                    00:c1:18:76:38:15:28:fb:a5:57:1c:c5:4a:95:a4:$                    23:68:c0:c1:27:1b:e3:c0:c3:4b:04:12:66:5c:cb:$                    9d:ae:eb:32:d4:54:6e:d6:e0:f9:dd:ea:97:5c:0d:$                    bd:49:5d:d2:51:49:b8:6e:c0:64:35:ad:c6:aa:c2:$                    be:aa:1b:45:e4:04:8a:c8:07:12:11:bd:ca:6d:ad:$                    44:f8:ca:29:6f:ab:20:35:6a:ea:b1:e3:28:01:fe:$                    4e:e0:c9:fd:41:3b:5e:d3:34:79:eb:00:4f:21:8f:$                    e8:79:41:68:07:2b:17:94:81:4a:8e:72:ce:0e:63:$                    76:7d:2b:4b:6d:40:2f:f2:df:34:2b:4c:2a:a5:01:$                    21:96:01:7c:de:0b:a5:ed:2e:5e:93:00:25:bf:05:$                    82:7a:ef:54:2b:de:fa:a1:4c:93:b2:f5:67:d4:ae:$                    ce:84:00:06:a4:ec:ee:bc:f8:b6:28:8f:72:61:56:$                    20:60:e0:7a:ea:81:52:b8:38:5b:bc:00:92:98:f4:$                    36:b2:b8:35:a1:11:a0:c1:03:e4:b1:8d:50:80:52:$                    2e:b7:b2:72:4e:8d:37:2a:37:20:73:f7:22:91:1c:$                    f2:7c:32:0f:a4:15:86:63:27:fa:53:e6:75:fe:bc:$                    b8:4f:9a:b9:c7:02:73:c8:07:bd:bf:54:9e:46:93:$                    12:2f$                Exponent: 65537 (0x10001)$    Signature Algorithm: sha256WithRSAEncryption$         3f:9c:20:ea:60:f7:82:1d:56:aa:5d:32:77:de:42:4f:d5:d4:$         f4:48:7d:5c:fe:c0:0a:a5:ea:7a:ef:b7:f4:46:fa:8b:d4:3e:$         8c:ad:ae:5a:2d:4d:b1:70:ec:09:76:9e:36:96:5f:6a:d9:c7:$         d6:1b:15:2c:42:cc:c2:13:a7:75:61:5b:5d:3b:37:fc:ae:79:$         8b:59:ca:24:83:62:7d:1e:83:b6:a6:64:be:af:7f:a6:6b:36:$         a2:26:12:12:04:37:29:a1:a1:fd:a3:5b:28:fc:cf:b7:85:63:$         ae:a5:09:fb:87:fa:3f:96:6c:f5:2b:42:6d:fa:14:3f:96:89:$         f6:b1:13:12:91:38:65:8d:ea:54:3f:16:75:94:b4:45:0a:c7:$         e2:f9:7f:3d:08:5c:ec:66:96:37:d8:bb:be:25:df:2a:d7:2e:$         87:c0:c0:d9:7c:f6:0a:fb:09:58:a9:49:55:7c:44:8d:ec:30:$         31:3a:b2:6a:63:ca:7e:6c:35:b2:04:5a:3b:df:1a:cc:bf:16:$         0f:41:95:05:a1:81:98:0b:84:4a:15:9e:94:74:46:ff:13:48:$         71:d0:11:7d:33:f5:cf:04:41:8b:77:e4:04:43:7e:24:5d:a4:$         6f:ff:e1:66:8d:71:1e:c3:2c:fa:8c:17:fd:c7:87:05:ef:8b:$         cd:9f:07:be$
+03/25/2016 11:41:03 [2822] realm is enabled: 
+03/25/2016 11:41:03 [2822] no Content-Length
+03/25/2016 11:41:03 [2822] try to get cookie for the first time: 98 :  SVPNNETWORKCOOKIE=; path=/remote/network; expires=Fri, 25-Mar-2016 18:41:01 GMT; secure; httponly
+03/25/2016 11:41:03 [2822] no Content-Length
+03/25/2016 11:41:03 [2822] cookie: SVPNCOOKIE=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aQE58OOKHyNBZi5gw+0IqnQAQJXEKF06N42Rs6UQP/k9lRR/+ipFWrOAJxxD1eWVD%0a6T+dIp+/UtyPFswKuZgojz57wPtB3M+ZYhvBW+s4CuE=%0a
+03/25/2016 11:41:03 [2822] no Content-Length
+03/25/2016 11:41:03 [2822] no Content-Length
+03/25/2016 11:41:03 [2822] 0|vpn.adventistmediacenter.com|443|1||wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aQE58OOKHyNBZi5gw+0IqnQAQJXEKF06N42Rs6UQP/k9lRR/+ipFWrOAJxxD1eWVD%0a6T+dIp+/UtyPFswKuZgojz57wPtB3M+ZYhvBW+s4CuE=%0a|0
+03/25/2016 11:41:03 [2819] ssl vpn tunnel started
+03/25/2016 11:41:03 [2824] server=vpn.adventistmediacenter.com[vpn.adventistmediacenter.com] port=443[443] version=1 tunnel= cookie=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aQE58OOKHyNBZi5gw+0IqnQAQJXEKF06N42Rs6UQP/k9lRR/+ipFWrOAJxxD1eWVD%0a6T+dIp+/UtyPFswKuZgojz57wPtB3M+ZYhvBW+s4CuE=%0a exclusive routing: 0
+
+03/25/2016 11:41:03 [2824] starting pppd
+03/25/2016 11:41:03 [2824] use tty:/dev/pts/2
+03/25/2016 11:41:03 [2824] connecting to vpn.adventistmediacenter.com:443
+03/25/2016 11:41:03 [2824] [xml config]: GET /remote/fortisslvpn_xml ... (received 812 bytes): 
+HTTP/1.1 200 OK
+Date: Fri, 25 Mar 2016 18:41:01 GMT
+Set-Cookie: SVPNCOOKIE=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aQE58OOKHyNBZi5gw+0IqnQAQJXEKF06N42Rs6UQP/k9lRR/+ipFWrOAJxxD1eWVD%0a6T+dIp+/UtyPFswKuZgojz57wPtB3M+ZYhvBW+s4CuE=%0a; path=/; secure; httponly
+Transfer-Encoding: chunked
+Content-Type: text/xml
+X-Frame-Options: SAMEORIGIN
+
+<?xml version='1.0' encoding='utf-8'?><sslvpn-tunnel ver='1'><fos platform='FG200D' major='5' minor='02' patch='4' build='0688' branch='688' /><client-config save-password='off' keep-alive='off' auto-connect='off' /><ipv4><dns ip='172.16.200.42' /><dns ip='172.16.200.46' /><wins ip='172.16.200.42' /><wins ip='172.16.200.46' /><assigned-addr ipv4='172.16.202.10' /></ipv4><idle-timeout val='300' /><auth-timeout val='28800' /></sslvpn-tunnel>
+----
+
+03/25/2016 11:41:03 [2824] Got local address from ppp, interface will be  up
+03/25/2016 11:41:05 [2824] ppp interface is up
+03/25/2016 11:41:05 [2824] run_scutil 97.93.161.242 0 0...
+Generating pppd.resolv.conf...Done
+03/25/2016 11:41:06 [2892] begin sysconfig linux
+03/25/2016 11:41:06 [2892] delete route 1.1.1.1
+03/25/2016 11:41:06 [2892] Add the route for 97.93.161.242(192.168.1.1)
+03/25/2016 11:41:06 [2892] router add default gw 172.16.202.10
+03/25/2016 12:44:23 [2819] rcv cmd:1 at state[1]
+03/25/2016 12:44:23 [2819] stopping ssl vpn tunnel[v4.0.2317]
+03/25/2016 12:44:23 [2819] kill_child:2824
+03/25/2016 12:44:23 [2819] kill_child:2822
+03/25/2016 12:44:23 [2822] signal rcved, logout now
+03/25/2016 12:44:23 [2824] killing pppd ...
+03/25/2016 12:44:23 [2824] kill_child:2826
+03/25/2016 12:44:23 [2824] kill_child:2892
+03/25/2016 12:44:23 [2819] tunnel terminated
+03/25/2016 12:44:23 [4099] begin cleanup linux...
+03/25/2016 12:44:23 [4099] restore /etc/resolv.conf
+03/25/2016 12:44:23 [4099] clean up route...
+03/25/2016 12:44:23 [4099] truncate pppd.log
+03/25/2016 12:44:23 [4099] truncate forticlientsslvpn.log
+03/25/2016 12:44:23 [2819] ssl vpn tunnel stopped
+03/25/2016 12:44:23 [2819] rcv cmd:2 at state[0]
+03/25/2016 14:50:33 [2797] set the loglevel to 1
+03/25/2016 14:50:33 [5986] set the loglevel to 1
+03/25/2016 14:50:33 [5986] sslvpn connection version:4.0.2317
+03/25/2016 14:50:33 [5986] rcv cmd:0 at state[0]
+03/25/2016 14:50:33 [5986] starting ssl vpn tunnel[4.0.2317]
+03/25/2016 14:50:33 [5988] route backup START
+03/25/2016 14:50:33 [5988] route backup DONE
+03/25/2016 14:50:33 [5989] execl /home/dunn/bin/forticlientsslvpn/64bit/./helper/get_fortisslvpn_info /home/dunn/bin/forticlientsslvpn/64bit/./helper vpn.adventistmediacenter.com 443   ...
+03/25/2016 14:50:33 [5989] trusted CA dir: /root/.fctsslvpn_trustca
+03/25/2016 14:50:33 [5989] set loglevel to 1
+03/25/2016 14:50:33 [5989] Peer's certificate is not valid. action is 1
+03/25/2016 14:50:33 [5989] peer's certificate: 
+        Version: 1 (0x0)$        Serial Number: 16354617681823055952 (0xe2f746219262c050)$    Signature Algorithm: sha256WithRSAEncryption$        Issuer: C=US, ST=California, L=Riverside, O=AMC, OU=IT, CN=vpn.adventistmediacenter.com/emailAddress=it@adventistmediacenter.com$        Validity$            Not Before: Sep 22 19:45:04 2015 GMT$            Not After : Sep 19 19:45:04 2025 GMT$        Subject: C=US, ST=California, L=Riverside, O=AMC, OU=IT, CN=vpn.adventistmediacenter.com/emailAddress=it@adventistmediacenter.com$        Subject Public Key Info:$            Public Key Algorithm: rsaEncryption$                Public-Key: (2048 bit)$                Modulus:$                    00:c1:18:76:38:15:28:fb:a5:57:1c:c5:4a:95:a4:$                    23:68:c0:c1:27:1b:e3:c0:c3:4b:04:12:66:5c:cb:$                    9d:ae:eb:32:d4:54:6e:d6:e0:f9:dd:ea:97:5c:0d:$                    bd:49:5d:d2:51:49:b8:6e:c0:64:35:ad:c6:aa:c2:$                    be:aa:1b:45:e4:04:8a:c8:07:12:11:bd:ca:6d:ad:$                    44:f8:ca:29:6f:ab:20:35:6a:ea:b1:e3:28:01:fe:$                    4e:e0:c9:fd:41:3b:5e:d3:34:79:eb:00:4f:21:8f:$                    e8:79:41:68:07:2b:17:94:81:4a:8e:72:ce:0e:63:$                    76:7d:2b:4b:6d:40:2f:f2:df:34:2b:4c:2a:a5:01:$                    21:96:01:7c:de:0b:a5:ed:2e:5e:93:00:25:bf:05:$                    82:7a:ef:54:2b:de:fa:a1:4c:93:b2:f5:67:d4:ae:$                    ce:84:00:06:a4:ec:ee:bc:f8:b6:28:8f:72:61:56:$                    20:60:e0:7a:ea:81:52:b8:38:5b:bc:00:92:98:f4:$                    36:b2:b8:35:a1:11:a0:c1:03:e4:b1:8d:50:80:52:$                    2e:b7:b2:72:4e:8d:37:2a:37:20:73:f7:22:91:1c:$                    f2:7c:32:0f:a4:15:86:63:27:fa:53:e6:75:fe:bc:$                    b8:4f:9a:b9:c7:02:73:c8:07:bd:bf:54:9e:46:93:$                    12:2f$                Exponent: 65537 (0x10001)$    Signature Algorithm: sha256WithRSAEncryption$         3f:9c:20:ea:60:f7:82:1d:56:aa:5d:32:77:de:42:4f:d5:d4:$         f4:48:7d:5c:fe:c0:0a:a5:ea:7a:ef:b7:f4:46:fa:8b:d4:3e:$         8c:ad:ae:5a:2d:4d:b1:70:ec:09:76:9e:36:96:5f:6a:d9:c7:$         d6:1b:15:2c:42:cc:c2:13:a7:75:61:5b:5d:3b:37:fc:ae:79:$         8b:59:ca:24:83:62:7d:1e:83:b6:a6:64:be:af:7f:a6:6b:36:$         a2:26:12:12:04:37:29:a1:a1:fd:a3:5b:28:fc:cf:b7:85:63:$         ae:a5:09:fb:87:fa:3f:96:6c:f5:2b:42:6d:fa:14:3f:96:89:$         f6:b1:13:12:91:38:65:8d:ea:54:3f:16:75:94:b4:45:0a:c7:$         e2:f9:7f:3d:08:5c:ec:66:96:37:d8:bb:be:25:df:2a:d7:2e:$         87:c0:c0:d9:7c:f6:0a:fb:09:58:a9:49:55:7c:44:8d:ec:30:$         31:3a:b2:6a:63:ca:7e:6c:35:b2:04:5a:3b:df:1a:cc:bf:16:$         0f:41:95:05:a1:81:98:0b:84:4a:15:9e:94:74:46:ff:13:48:$         71:d0:11:7d:33:f5:cf:04:41:8b:77:e4:04:43:7e:24:5d:a4:$         6f:ff:e1:66:8d:71:1e:c3:2c:fa:8c:17:fd:c7:87:05:ef:8b:$         cd:9f:07:be$
+03/25/2016 14:50:34 [5989] realm is enabled: 
+03/25/2016 14:50:34 [5989] no Content-Length
+03/25/2016 14:50:34 [5989] try to get cookie for the first time: 98 :  SVPNNETWORKCOOKIE=; path=/remote/network; expires=Fri, 25-Mar-2016 21:50:34 GMT; secure; httponly
+03/25/2016 14:50:34 [5989] no Content-Length
+03/25/2016 14:50:34 [5989] cookie: SVPNCOOKIE=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aQE58OOKHyNBZi5gw+0IqnRrysb5ge3RchLgd8jScW9dWUHLm9c3/pk/BrHMDwpj3%0anckYcmVImMxj64Bx5LRzTK2AfSEFBdmu2KyIauqLCX0=%0a
+03/25/2016 14:50:34 [5989] no Content-Length
+03/25/2016 14:50:34 [5989] no Content-Length
+03/25/2016 14:50:34 [5989] 0|vpn.adventistmediacenter.com|443|1||wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aQE58OOKHyNBZi5gw+0IqnRrysb5ge3RchLgd8jScW9dWUHLm9c3/pk/BrHMDwpj3%0anckYcmVImMxj64Bx5LRzTK2AfSEFBdmu2KyIauqLCX0=%0a|0
+03/25/2016 14:50:34 [5986] ssl vpn tunnel started
+03/25/2016 14:50:34 [5991] server=vpn.adventistmediacenter.com[vpn.adventistmediacenter.com] port=443[443] version=1 tunnel= cookie=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aQE58OOKHyNBZi5gw+0IqnRrysb5ge3RchLgd8jScW9dWUHLm9c3/pk/BrHMDwpj3%0anckYcmVImMxj64Bx5LRzTK2AfSEFBdmu2KyIauqLCX0=%0a exclusive routing: 0
+
+03/25/2016 14:50:34 [5991] starting pppd
+03/25/2016 14:50:34 [5991] use tty:/dev/pts/2
+03/25/2016 14:50:34 [5991] connecting to vpn.adventistmediacenter.com:443
+03/25/2016 14:50:34 [5991] [xml config]: GET /remote/fortisslvpn_xml ... (received 812 bytes): 
+HTTP/1.1 200 OK
+Date: Fri, 25 Mar 2016 21:50:34 GMT
+Set-Cookie: SVPNCOOKIE=wiDdarE4FTvl3C6Sc0OQ0XDz9+Gpe2Ze1DTy89+FhqrreCF/3EaCIKEs5zVeMoP2%0aQE58OOKHyNBZi5gw+0IqnRrysb5ge3RchLgd8jScW9dWUHLm9c3/pk/BrHMDwpj3%0anckYcmVImMxj64Bx5LRzTK2AfSEFBdmu2KyIauqLCX0=%0a; path=/; secure; httponly
+Transfer-Encoding: chunked
+Content-Type: text/xml
+X-Frame-Options: SAMEORIGIN
+
+<?xml version='1.0' encoding='utf-8'?><sslvpn-tunnel ver='1'><fos platform='FG200D' major='5' minor='02' patch='4' build='0688' branch='688' /><client-config save-password='off' keep-alive='off' auto-connect='off' /><ipv4><dns ip='172.16.200.42' /><dns ip='172.16.200.46' /><wins ip='172.16.200.42' /><wins ip='172.16.200.46' /><assigned-addr ipv4='172.16.202.11' /></ipv4><idle-timeout val='300' /><auth-timeout val='28800' /></sslvpn-tunnel>
+----
+
+03/25/2016 14:50:34 [5991] Got local address from ppp, interface will be  up
+03/25/2016 14:50:36 [5991] ppp interface is up
+03/25/2016 14:50:36 [5991] run_scutil 97.93.161.242 0 0...
+Generating pppd.resolv.conf...Done
+03/25/2016 14:50:37 [6048] begin sysconfig linux
+03/25/2016 14:50:37 [6048] delete route 1.1.1.1
+03/25/2016 14:50:37 [6048] Add the route for 97.93.161.242(192.168.1.1)
+03/25/2016 14:50:37 [6048] router add default gw 172.16.202.11
+03/25/2016 14:58:56 [5986] rcv cmd:1 at state[1]
+03/25/2016 14:58:56 [5986] stopping ssl vpn tunnel[v4.0.2317]
+03/25/2016 14:58:56 [5986] kill_child:5991
+03/25/2016 14:58:56 [5986] kill_child:5989
+03/25/2016 14:58:56 [5989] signal rcved, logout now
+03/25/2016 14:58:56 [5991] killing pppd ...
+03/25/2016 14:58:56 [5991] kill_child:5993
+03/25/2016 14:58:56 [5991] kill_child:6048
+03/25/2016 14:58:56 [5986] tunnel terminated
+03/25/2016 14:58:56 [6301] begin cleanup linux...
+03/25/2016 14:58:56 [6301] restore /etc/resolv.conf
+03/25/2016 14:58:56 [6301] clean up route...
+03/25/2016 14:58:56 [6301] truncate pppd.log
+03/25/2016 14:58:56 [6301] truncate forticlientsslvpn.log
+03/25/2016 14:58:56 [5986] ssl vpn tunnel stopped
+03/25/2016 14:58:56 [5986] rcv cmd:2 at state[0]

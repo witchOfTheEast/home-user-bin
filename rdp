@@ -120,7 +120,7 @@ user_select () {
 main () {
     user_select $pattern $host $user;
     host_select $pattern $host $user;
-    test_connect;
+    connect;
 }
     
 main

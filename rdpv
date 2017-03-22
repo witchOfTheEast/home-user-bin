@@ -1,0 +1,87 @@
+#!/bin/bash
+
+usage () {
+    echo -n "
+Usage: rdp [a|aa|la|na] v|k|HOSTNAME
+   
+    When a single arguement is give:
+        The 1st argument must be a HOSTNAME or hostname shortcut.
+    
+    When two arguements are give:
+        The 1st argument must be a USERNAME or shortcut.
+        The 2nd argument must be a HOSTNAME or shortcut.
+    
+   
+    Shortcuts:
+       
+    HOSTNAME
+        v       veeam
+        k       kore
+    
+    USERNAME
+        a       hq\\administrator
+        aa      .\\ammadmin
+        la      .\\administrator
+        na      hq\\nonadmin
+        USER    hq\\USER
+
+"
+}
+
+connect () {
+    # Using -dash option syntax because ''grab-keyboard'' was not effective
+    # when used as /grab-keyboard
+   
+    echo "
+    Connecting to $target as $user." # Cosmetic issue - $user contains unescaped slash
+    xfreerdp -u:$user -size:$size -t:"Vertical: $hostname" -v:$target -grab-keyboard -z +clipboard | grep -v '336' 
+}
+
+domain=.hq.sdamedia.com
+size=1080x612
+
+if [[ ${#} -eq 1 ]]; then
+    hostname=$1
+    
+    case $hostname in
+
+        v)  user=.\\administrator
+            hostname=veeam
+            ;;
+        k)  user=hq\\administrator
+            hostname=kore
+            ;;
+        *)  user=hq\\rdunn
+            ;;
+    esac
+    
+    target=$hostname${domain}
+    
+    connect 
+    
+    elif [[ ${#} -gt 1 ]]; then
+        user=$1
+        hostname=$2
+        target=$hostname${domain}
+        
+        case $user in
+
+            a)  user=hq\\administrator 
+                ;;
+            aa) user=.\\ammadmin
+                ;; 
+            la) user=.\\administrator
+                ;;
+            na) user=hq\\nonadmin
+                ;; 
+            *) user=$user
+                ;;
+        esac
+        
+        connect 
+
+
+    else
+        usage
+
+fi

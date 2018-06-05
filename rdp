@@ -19,9 +19,8 @@ Usage: rdp [a|aa|la|na] v|k|HOSTNAME|ipa.ddr.ess.num
         k       kore
     
     USERNAME
-        a       hq\\administrator
-        aa      .\\ammadmin
-        la      .\\administrator
+        x       hq\\administrator
+        la      .\\localadmin
         na      hq\\nonadmin
         USER    hq\\USER
 
@@ -92,21 +91,16 @@ user_select () {
                     host=veeam
     echo $host;
                     ;;
-                k)  user=hq\\administrator
-                    host=kore
-                    ;;
-                *)  user=hq\\a-rdunn
+                *)  user=hq\\rdunn
                     ;;
         esac;
     elif [[ $pattern == 'userhost' ]]; then
 
         case $user in
 
-            a)  user=hq\\administrator 
+            a)  user=hq\\a-rdunn
                 ;;
-            aa) user=.\\ammadmin
-                ;; 
-            la) user=.\\administrator
+            la) user=.\\localadmin
                 ;;
             na) user=hq\\nonadmin
                 ;; 

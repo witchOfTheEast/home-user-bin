@@ -1,0 +1,93 @@
+#! /bin/bash
+
+scriptName=$(basename $0)
+
+usage () {
+
+echo "Usage: "${scriptName}" <<HOSTNAME>>" 
+echo ""
+echo "This script installs a new wildcard.hq.sdamedia.com certificate on {hostname}"
+echo ""
+echo "It requires manually stopping unifi and nginx services (the command in the script
+seem to have no effect"
+echo ""
+echo "It also requires three files in the current working directory"
+echo "cloudkey.crt <-- the signed certificate"
+echo "cloudkey.key <-- the private key used to make the certificate request"
+echo "chain.crt    <-- the signed certificate and intermediate certificate"
+echo ""
+echo -e "Create chain.crt with the command:"
+echo -e "\$ cat <<SIGNEDCERT.crt>> <<INTERMEDIATECERT.crt>> > chain.crt"
+
+}
+if [[ ! "$#" -gt 0 ]]; then
+    usage;
+    exit 2;
+else
+    hostname="$1";
+#    ping -c 4 ${hostname} 2&>1 1>/dev/null;
+#    echo $?;
+#    if [[ "$?" -ne 0 ]]; then
+#        echo "Problem with the hostname ${hostname}";
+#        exit 3;
+#    fi
+
+fi
+
+cwd=$(pwd)
+
+fileMissingFail=0
+requiredFilesString="cloudkey.crt cloudkey.key chain.crt"
+requiredFilesArray=(cloudkey.crt cloudkey.key chain.crt)
+declare notFoundArray=()
+
+for requiredFile in ${requiredFilesArray[*]}; do
+    echo "Looking for ${requiredFile}";
+    if [[ -e ${requiredFile} ]]; then
+        echo -e "${requiredFile} found in CWD\n";
+    else
+        notFoundArray+=("${requiredFile}");
+        fileMissingFail=1;
+    fi;
+done
+
+if [[ ${fileMissingFail} == 1 ]]; then
+    for i in ${notFoundArray[*]}; do
+        echo -e "${i} not found in ${cwd}";
+    done;
+    usage;
+    exit 1;
+fi
+
+echo "We seem to have all necessary files. Let's proceed."
+# echo "Preparing ${hostname}, moving old files to ${hostname}:~/backup, stopping unifi service"
+
+ssh -t ${hostname} "
+mkdir ~/backup/ 
+mv -t ~/backup /etc/ssl/private/* 
+[ "$(ls -A /etc/ssl/private)" ] && 
+echo "Directory is *not* empty. Try again."; exit 1 || 
+echo "Directory is EMPTY" 
+service unifi stop 
+service unifi status
+"
+
+# echo "Copying files to ${hostname}"
+
+scp cloudkey.crt cloudkey.key chain.crt ${hostname}:/etc/ssl/private/
+
+
+# echo "Creating jks, tarball, clean up and restarting unifi and nginx service"
+
+ssh -t ${hostname} '
+cd /etc/ssl/private
+openssl pkcs12 -export -in cloudkey.crt -inkey cloudkey.key -certfile chain.crt -out unifi.p12 -name unifi -password pass:aircontrolenterprise
+keytool -importkeystore -srckeystore unifi.p12 -srcstoretype PKCS12 -srcstorepass aircontrolenterprise -destkeystore unifi.keystore.jks -storepass aircontrolenterprise
+tar cf cert.tar cloudkey.crt cloudkey.key unifi.keystore.jks
+rm chain.crt unifi.p12
+service unifi start
+service nginx start
+'
+
+echo "That should be it."
+exit 0

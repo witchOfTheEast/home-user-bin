@@ -54,7 +54,7 @@ connect () {
    
     echo "
     Connecting to $target as $user." # Cosmetic issue - $user contains unescaped slash
-    xfreerdp -u:$user -size:$size -t:$host -v:$target -grab-keyboard -z +clipboard | grep -v '336' 
+    xfreerdp -network:auto -u:$user -size:$size -t:$user@$host -v:$target -grab-keyboard -z +clipboard | grep -v '336' 
 }
 
 test_connect () {

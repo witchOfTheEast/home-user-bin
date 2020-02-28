@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sed -i 's/anonymous_enable=YES/anonymous_enable=NO/' /etc/vsftpd/vsftpd.conf
+setsebool ftpd_anon_write off
+getsebool -a | grep ftpd_anon_write
+systemctl stop vsftpd
+systemctl status vsftpd | grep -i active
+firewall-cmd --remove-service=ftp
+firewall-cmd --list-services
+chmod o-w /var/ftp/pub

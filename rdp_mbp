@@ -1,0 +1,123 @@
+#!/bin/bash
+
+usage () {
+    echo -n "
+Usage: rdp [a|aa|la|na] v|k|HOSTNAME|ipa.ddr.ess.num
+   
+    When a single arguement is give:
+        The 1st argument must be a HOSTNAME or hostname shortcut.
+    
+    When two arguements are give:
+        The 1st argument must be a USERNAME or shortcut.
+        The 2nd argument must be a HOSTNAME or shortcut.
+    
+   
+    Shortcuts:
+       
+    HOSTNAME
+        v       veeam
+        k       kore
+    
+    USERNAME
+        x       hq\\administrator
+        la      .\\localadmin
+        na      hq\\nonadmin
+        USER    hq\\USER
+
+"
+}
+
+domain=.hq.sdamedia.com
+#size=800x600
+size=1920x1039
+scale=180
+user=''
+host_type=''
+pattern=''
+target=''
+
+if [[ ${#} -eq 1 ]]; then
+#    echo "Pattern is type: 'host only'";
+    pattern='hostonly';
+    host=$1;
+
+elif [[ ${#} -eq 2 ]]; then
+#    echo "Pattern is type: 'user and host'";
+    pattern='userhost';
+    user=$1;
+    host=$2;
+else
+    usage;
+fi
+
+connect () {
+    # Using -dash option syntax because ''grab-keyboard'' was not effective
+    # when used as /grab-keyboard
+   
+    echo "
+    Connecting to $target as $user." # Cosmetic issue - $user contains unescaped slash
+    xfreerdp -smart-sizing -floatbar -network:auto -u:$user -size:$size -t:$user@$host -v:$target -grab-keyboard -z +clipboard | grep -v '336' 
+    #xfreerdp -smart-sizing -scale:$scale -floatbar -dynamic-resolution -network:auto -u:$user -size:$size -t:$user@$host -v:$target -grab-keyboard -z +clipboard | grep -v '336' 
+}
+
+test_connect () {
+    echo "my domain: $domain
+    my pattern: $pattern
+    my user: $user
+    my host: $host
+    my target: $target"
+}
+
+host_select () {
+    echo "host received: $2";
+    if [[ $2 =~ [0-9] ]]; then 
+        echo "host_type='IPADDRESS'";
+        target=$host;
+
+    elif [[ $2 =~ [a-zA-Z] ]]; then
+        host_type='HOSTNAME';
+        target=$host${domain};
+
+    else
+        echo -e "\nUnrecognized host format";
+        usage;
+    fi
+}
+
+user_select () {
+    host=$2;
+    if [[ $pattern == 'hostonly' ]]; then
+        case $host in
+
+                v)  user=.\\administrator
+    echo $host;
+                    host=veeam
+    echo $host;
+                    ;;
+                *)  user=hq\\rdunn
+                    ;;
+        esac;
+    elif [[ $pattern == 'userhost' ]]; then
+
+        case $user in
+
+            a)  user=hq\\a-rdunn
+                ;;
+            la) user=.\\localadmin
+                ;;
+            na) user=hq\\nonadmin
+                ;; 
+            *) user=$user
+                ;;
+        esac;
+
+    fi
+}
+
+main () {
+    user_select $pattern $host $user;
+    host_select $pattern $host $user;
+    connect;
+}
+    
+main
